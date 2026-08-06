@@ -1,32 +1,15 @@
-# React + TypeScript + Vite
+O projeto é uma aplicação de planejamento financeiro pessoal. O usuário informa sua renda, gastos, dívidas e uma meta, e recebe uma análise sobre quanto precisa economizar por mês para alcançá-la.
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Para executar a aplicação:
+cd E:\projects\dio\planejai
+pnpm install
+pnpm dev
+Em seguida, acesse o endereço exibido no terminal.
 
-Currently, two official plugins are available:
+Foram utilizadas as seguintes tecnologias: React, TypeScript, Vite, Tailwind CSS, React Router, Lucide Icons, integração com Gemini API e localStorage.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Como melhoria, foi criada a tela de histórico de simulações. Nela, é possível visualizar um resumo de cada meta, acessar os detalhes com os insights já gerados e excluir registros. Também foi adicionado um espaço para conversar com o educador financeiro, permitindo tirar dúvidas sobre cada simulação. As mensagens ficam armazenadas localmente para consultas futuras.
 
-## React Compiler
+Para testar o fluxo principal, basta criar uma nova simulação preenchendo todas as etapas, aguardar a análise financeira, fazer uma pergunta no campo de conversa e acessar a página de histórico. Ao abrir os detalhes da simulação, os dados, insights e mensagens anteriores devem continuar disponíveis. Também é possível validar a exclusão de um item pelo histórico.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Durante o desenvolvimento, foi possível praticar a persistência de dados no navegador, a organização de informações por simulação e a integração de respostas baseadas no contexto financeiro informado pelo usuário. Também foi necessário ajustar a tipagem dos dados para manter o formulário, o histórico e as conversas funcionando de forma consistente.
